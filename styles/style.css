@@ -1,0 +1,11 @@
+:root{
+    --main-bg-color: #1b1a1a;
+    --colorA: #4b4b99;
+    --colorB: #e4803e;
+    --colorC: #36b6d4;
+    --main-text-color: #FFF;
+    --main-border-color: #ccc;
+    --main-border-radius: 5px;
+    --main-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --main-transition: 0.3s;
+}
