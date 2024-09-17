@@ -4,30 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style.css">
+    <base href="/pages/">
     <link rel="script" href="../scripts/script.js">
     <title>Home - EpsiZone</title>
     <link rel="icon" href="../images/EPSIZONE-icon.png">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <img src="../images/EPSIZONE-1.png" alt="logo epsi zone">
-            <ul>
+    <nav class="navbar">
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-container">
+            <li class="nav-item">
+                <a href="../pages/index.html" class="nav-link">
+                    <img class="home-image" src="../images/EPSIZONE-1-blanc.png" alt="Home">
+                </a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="../pages/jeux.html">LE JEU</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pages/quiz.html">QUIZ</a></li>
+            <li class="nav-item"><a class="nav-link bouton-contact" href="../pages/contact.html">CONTACT</a></li>
 
-                <li><a href="jeu.html">Le jeu </a></li>
-                <li><a href="quiz.html">Le quiz </a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        </ul>
+    </nav>
+
+    <container class="Accroche">
+
+        <img src="../images/EPSIZONE-2-Slogan.png" alt="Images d'accroche">
+        <p> Vous voulez en savoir plus ?<a href="#decouvrir">Nous decouvrir</a></p>
+
+        <div class="containerImg"></div>
 
 
+    </container>
 
-    <footer>
-        <p>&copy; 2021 - EpsiZone</p>
-    </footer>
-
+    <container class="containerDecouvrir">
+        <h1> Qui sommes-nous ? </h1>
+         <p>Epsizone est une application innovante qui propose aux utilisateurs de découvrir l’univers d’EPSI à travers un jeu immersif. Cette plateforme interactive offre une visite virtuelle complète du campus d’EPSI, permettant aux personnes extérieures de plonger dans le quotidien d’un étudiant de l'école. Les joueurs peuvent explorer différents espaces de vie, rencontrer des enseignants, découvrir les projets étudiants et s’immerger dans les événements marquants de la vie étudiante. Epsizone est bien plus qu'une simple visite guidée, c'est une véritable expérience numérique qui donne un aperçu dynamique et réaliste de ce qu'est la vie à EPSI.</p>
+        <img src="../images/close-up-bearded-young-man-isolated.jpg" alt="Image homme qui se questionne">
+    </container>
     
 </body>
 </html>

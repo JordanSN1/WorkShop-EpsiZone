@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root{
     --main-bg-color: #1b1a1a;
     --colorA: #4b4b99;
@@ -12,3 +14,246 @@
 
 
 
+body{
+    font-family: 'Libre Franklin', sans-serif;
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    transition: background-color 0.15s ease-in-out;
+    background: linear-gradient(135deg, #F5F5F5, #1b1a1a5c);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+
+
+.navbar {
+    background-color: var(--main-bg-color);
+    padding: 1px 20px;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    z-index: 1000;
+
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.nav-container {
+    list-style-type: none;
+    width: 1400px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+.navbar img {
+    width: 150px;
+    height: 100px;
+}
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+.nav-link:not(.bouton-contact):hover {
+    color: #F5F5F5;
+    border-bottom: #FFF 2px solid;
+   
+}
+.bouton-contact {
+    background-color: var(--colorA);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:not(.bouton-contact)::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+
+
+.bouton-contact:hover {
+    background-color: #36b6d4;
+}
+
+
+.Accroche img {
+    margin-top: 220px;
+    margin-left: 850px;
+    width: 600px;
+    height: 100%;
+
+
+
+}
+
+.Accroche p{
+    font-size: 20px;
+    font-family: "Libre Franklin", sans-serif;
+
+    color: #1b1a1a;
+    font-weight: 800;
+    margin-top: 50px;
+    margin-left: 865px;
+    width: 800px;
+    height: 100%;
+}
+
+.Accroche a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    background-color: var(--colorA);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+.containerImg{
+    display: flex;
+    position: absolute;
+    top: 100px;
+    width: 100vw;
+    z-index: -1;
+    height: 500px;
+    background-image: url(../images/handsome-bearded-man-pointing-fingers-rights-empty-space-looking-confident-standing-blue-b.jpg);
+    background-size: cover;
+}
+
+.containerDecouvrir {
+    margin-top : 200px;
+    display: flex;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 400;
+
+
+}
+
+.containerDecouvrir h1 {
+    font-size: 40px;
+    color: #1b1a1a;
+    margin-left: 205px;
+    margin-top: 60px;
+}
+
+.containerDecouvrir p {
+    font-weight: 600;
+    font-size: 20px;
+    color: #1b1a1a;
+    background-color: #e4803e;
+    padding: 25px 45px;
+    border-radius: 14px;
+    margin-left: 250px;
+    margin-top: 50px;
+    width: 500px;
+    line-height: 1.5 ;
+    box-shadow: #1b1a1abc 5px 5px 0px ;
+}
+
+.containerDecouvrir img {
+    display: flex;
+    position: absolute;
+    width: 550px;
+    height: 350px;
+    top: 780px;
+    left: 150px;
+    border-radius: 14px;
+}
+
+
+/********** Page jeu**********/
+
+
+.container-jeux {
+    background-color: #f0fafa;
+    overflow-y: hidden;
+}
+
+.ligne1{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    max-width: 110vw;
+    height: 350px;
+    margin-top: 30px;
+}
+
+.ligne1 {
+    height: 420px;
+}
+
+.ligne2 {
+    position: relative;
+    height: 240px;
+    margin: 20px;
+    border-radius: 15px;
+    background-color: var(--colorB);
+}
+
+.colonne1 {
+    width: 35%;
+    background-color: #1b1a1a;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+.colonne2 {
+    width: 65%;
+    background-color: #36b6d4;
+    border-radius: 15px;
+}
+
+.button-group {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+button:hover {
+    background-color: #ddd;
+}
