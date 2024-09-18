@@ -9,7 +9,7 @@
     <link rel="icon" href="../images/EPSIZONE-icon.png">
 </head>
 <body>
-    <div class="container">
+    <div class="container-jeux">
         <div class="ligne1">
             <div class="colonne1">
                 <img src="../images/avatar1.png" alt="Avatar" class="avatar1" id="avatar1">
@@ -36,8 +36,34 @@
     </div>
 
     </div>
+    <button class="quiz-btn elevateBtn" id="quiz-btn">Quiz ?</button>
 
     <script src="../scripts/script.js"></script>
+    
+    <button class="menu-btn" id="menu-btn">☰ Menu</button>
+
+    <nav class="side-menu" id="side-menu">
+        <ul>
+            <li><a href="#" class="imageHome" ><img src="../images/EPSIZONE-1-blanc-recadre.png" alt="" class="menu-homeIMG" style="margin-left: 8px; margin-bottom: 15px;"></a></li>
+            <li><a href="#">Jeu</a></li>
+            <li><a href="#">Quiz</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </nav>
+
+    <script >
+        // Sélectionne les éléments du DOM
+        const menuBtn = document.getElementById('menu-btn');
+        const sideMenu = document.getElementById('side-menu');
+
+        // Ajoute un événement au clic sur le bouton
+        menuBtn.addEventListener('click', () => {
+        // Bascule la classe 'open' pour afficher ou masquer le menu
+        sideMenu.classList.toggle('open');
+    });
+    </script>
+
+
 
 
 </body>

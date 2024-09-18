@@ -209,9 +209,11 @@ body{
 
 
 /********** Page jeu**********/
+
 .container-jeux {
-    background-color: #f0fafa;
+    background-color: var(--main-border-color);
     overflow-y: hidden;
+    height: 100vh;
 }
 
 .ligne1{
@@ -225,18 +227,37 @@ body{
 
 .ligne1 {
     height: 420px;
+    margin-left: 40px;
 }
 
 .ligne2 {
     position: relative;
     height: 200px;
+    width: 70%;
     margin: 20px;
-    border-radius: 15px;
-    background-color: var(--colorB);
-    padding: 20px;
+    margin-top: 40px;
+    margin-left: 245px;
     box-shadow: -3px 0px 21px 1px rgba(0,0,0,0.35);
     -webkit-box-shadow: -3px 0px 21px 1px rgba(0,0,0,0.35);
     -moz-box-shadow: -3px 0px 21px 1px rgba(0,0,0,0.35);
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.ligne2::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 9%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid white;
+    border-top: none;
 }
 
 .colonne1 {
@@ -263,12 +284,12 @@ video {
 
 .button-group {
     position: absolute;
-    bottom: 10px;
+    bottom: 15px;
     right: 20px;
 }
 
 
-.avatar1, .avatar2 {
+.avatar1, .avatar2, .avatar3, .avatar4 {
     height: 100%;
     width: 100%;
     object-fit: fill;
@@ -313,6 +334,8 @@ video {
     transform: translateY(1px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+
 
 
 .News {
@@ -444,7 +467,7 @@ video {
 
 
 }
-.colonne2-news img {
+.colonne2IMG {
     display: flex;
     position: absolute;
     width: 300px;
@@ -452,8 +475,109 @@ video {
     top: 1420px;
     left: 990px;
     border-radius: 14px;
+    margin-left: -20px;
 }
 
+
+
+.menu-btn {
+    position: fixed;
+    bottom: 45px; 
+    left: 1004px;    
+    margin-left: 8px;
+    background-color: var(--main-bg-color);
+    color: white;
+    border: none;
+    padding: 8.7px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-btn {
+    position: fixed;
+    bottom: 45px; 
+    right: 40px;
+    margin-left: 8px;
+    background-color: var(--colorB);
+    color: white;
+    border: none;
+    padding: 8.7px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu latéral caché par défaut */
+.side-menu {
+    position: fixed;
+    top: 465px;
+    left: -230px; 
+    width: 200px;
+    height:250px;
+    margin-left: 20px;
+    background-color: #333;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+    padding-top: 0px;
+    border-radius: 14px;
+}
+
+/* Contenu du menu */
+.menu-homeIMG {
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+
+.side-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+
+.side-menu ul li {
+    margin: 20px 0;
+    
+}
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: background 0.3s, border-radius 0.3s;
+    border-radius: 14px; 
+}
+
+.side-menu ul li a:not(.imageHome):hover {
+    background-color: #444;
+}
+
+
+
+.menu-btn:hover {
+    transform: translateY(-5px);
+}
+
+.menu-btn:active {
+    transform: translateY(1px);
+}
+
+/* Menu visible */
+.side-menu.open {
+    left: 0;
+}
+
+.imageHome{
+    margin-left: 0px;
+}
 
 
 /********** Page contact **********/
