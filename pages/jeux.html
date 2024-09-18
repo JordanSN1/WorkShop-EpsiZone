@@ -11,18 +11,34 @@
 <body>
     <div class="container">
         <div class="ligne1">
-            <div class="colonne1"></div>
-            <div class="colonne2"></div>
-        </div>
-
-        <div class="ligne2">
-            <div class="button-group">
-                <button>Précédent</button>
-                <button>Suivant</button>
+            <div class="colonne1">
+                <img src="../images/avatar1.png" alt="Avatar" class="avatar1" id="avatar1">
+                <img src="../images/avatar2.png" alt="Avatar" class="avatar2" id="avatar2">
+            </div>
+            <div class="colonne2">
+                <video width="1040vw" height="419" controls autoplay id="vid1" class="vid1">
+                    <source src="../videos/Visite_du_campus_de_Paris.mp4" type=video/ogg type=video/mp4>
+                </video>
+                <video width="1040vw" height="419" controls autoplay id="vid2" class="vid2">
+                    <source src="../videos/Presentation_des_programmes_EPSI.mp4" type=video/ogg type=video/mp4>
+                </video>
             </div>
         </div>
 
+        <div class="ligne2">
+            <p class="dialogue1">Ceci est le premier dialogue </p>
+            <p class="dialogue2">Là et le deuxime dialogue</p>
+            <div class="button-group">
+                <button id="precedent" class="elevateBtn">Précédent</button>
+                <button id="suivant" class="elevateBtn">Suivant</button>
+            </div>
+        </div>
     </div>
+
+    </div>
+
+    <script src="../scripts/script.js"></script>
+
 
 </body>
 </html>
