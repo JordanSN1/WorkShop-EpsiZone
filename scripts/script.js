@@ -99,3 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
         typeWriterEffect(dialogue1, dialogue1.textContent);
     });
 });
+
+
+

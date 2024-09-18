@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1 class="quiz-title">Quiz de Culture Générale</h1>
+        <form id="quiz-form" class="quiz-form">
+            <div class="quiz-question">
+                <h3 class="question-title">1. Quelle est la capitale de la France ?</h3>
+                <label class="quiz-option"><input type="radio" name="q1" value="2"> Paris</label><br>
+                <label class="quiz-option"><input type="radio" name="q1" value="0"> Lyon</label><br>
+                <label class="quiz-option"><input type="radio" name="q1" value="0"> Marseille</label>
+            </div>
+
+            <div class="quiz-question">
+                <h3 class="question-title">2. Quel est l'élément chimique symbolisé par 'O' ?</h3>
+                <label class="quiz-option"><input type="radio" name="q2" value="2"> Oxygène</label><br>
+                <label class="quiz-option"><input type="radio" name="q2" value="0"> Or</label><br>
+                <label class="quiz-option"><input type="radio" name="q2" value="0"> Osmium</label>
+            </div>
+
+            <div class="quiz-question">
+                <h3 class="question-title">3. Quel est le plus grand océan de la planète ?</h3>
+                <label class="quiz-option"><input type="radio" name="q3" value="2"> Pacifique</label><br>
+                <label class="quiz-option"><input type="radio" name="q3" value="0"> Atlantique</label><br>
+                <label class="quiz-option"><input type="radio" name="q3" value="0"> Indien</label>
+            </div>
+
+            <div class="quiz-question">
+                <h3 class="question-title">4. Quelle planète est connue sous le nom de 'Planète Rouge' ?</h3>
+                <label class="quiz-option"><input type="radio" name="q4" value="2"> Mars</label><br>
+                <label class="quiz-option"><input type="radio" name="q4" value="0"> Jupiter</label><br>
+                <label class="quiz-option"><input type="radio" name="q4" value="0"> Vénus</label>
+            </div>
+
+            <div class="quiz-question">
+                <h3 class="question-title">5. Qui a écrit 'Les Misérables' ?</h3>
+                <label class="quiz-option"><input type="radio" name="q5" value="2"> Victor Hugo</label><br>
+                <label class="quiz-option"><input type="radio" name="q5" value="0"> Émile Zola</label><br>
+                <label class="quiz-option"><input type="radio" name="q5" value="0"> Honoré de Balzac</label>
+            </div>
+
+            <button type="button" class="quiz-button" onclick="calculerScore()">Valider le Quiz</button>
+        </form>
+        <div id="resultat" class="quiz-result"></div>
+    </div>
+
+    <script >
+        function calculerScore() {
+    let score = 0;
+    const form = document.forms['quiz-form'];
+
+    // Vérifier les réponses
+    for (let i = 1; i <= 5; i++) {
+        const question = form[`q${i}`];
+        if (question) {
+            const reponse = Array.from(question).find(radio => radio.checked);
+            if (reponse) {
+                score += parseInt(reponse.value);
+            }
+        }
+    }
+
+    // Afficher le score sur 10
+    document.getElementById('resultat').innerHTML = `Votre score est de ${score}/10`;
+}
+    </script>
+</body>
+</html>
